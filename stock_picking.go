@@ -74,8 +74,6 @@ type StockPicking struct {
 	PickingTypeCode                  *Selection  `xmlrpc:"picking_type_code,omitempty"`
 	PickingTypeEntirePacks           *Bool       `xmlrpc:"picking_type_entire_packs,omitempty"`
 	PickingTypeId                    *Many2One   `xmlrpc:"picking_type_id,omitempty"`
-	PosOrderId                       *Many2One   `xmlrpc:"pos_order_id,omitempty"`
-	PosSessionId                     *Many2One   `xmlrpc:"pos_session_id,omitempty"`
 	Printed                          *Bool       `xmlrpc:"printed,omitempty"`
 	Priority                         *Selection  `xmlrpc:"priority,omitempty"`
 	ProductId                        *Many2One   `xmlrpc:"product_id,omitempty"`
@@ -102,6 +100,8 @@ type StockPicking struct {
 	ShowReserved                     *Bool       `xmlrpc:"show_reserved,omitempty"`
 	ShowSetQtyButton                 *Bool       `xmlrpc:"show_set_qty_button,omitempty"`
 	Signature                        *String     `xmlrpc:"signature,omitempty"`
+	StarshipitParcelReference        *String     `xmlrpc:"starshipit_parcel_reference,omitempty"`
+	StarshipitReturnParcelReference  *String     `xmlrpc:"starshipit_return_parcel_reference,omitempty"`
 	State                            *Selection  `xmlrpc:"state,omitempty"`
 	UseCreateLots                    *Bool       `xmlrpc:"use_create_lots,omitempty"`
 	UseExistingLots                  *Bool       `xmlrpc:"use_existing_lots,omitempty"`
@@ -112,13 +112,14 @@ type StockPicking struct {
 	WeightUomName                    *String     `xmlrpc:"weight_uom_name,omitempty"`
 	WriteDate                        *Time       `xmlrpc:"write_date,omitempty"`
 	WriteUid                         *Many2One   `xmlrpc:"write_uid,omitempty"`
+	XStudioCarrier                   *Many2One   `xmlrpc:"x_studio_carrier,omitempty"`
 	XStudioCharField8S21I1Tlp844     *String     `xmlrpc:"x_studio_char_field_8s2_1i1tlp844,omitempty"`
 	XStudioDatetimeField10P1I2Iovv3K *Time       `xmlrpc:"x_studio_datetime_field_10p_1i2iovv3k,omitempty"`
-	XStudioDeadline                  *Time       `xmlrpc:"x_studio_deadline,omitempty"`
 	XStudioDeadline1                 *Time       `xmlrpc:"x_studio_deadline_1,omitempty"`
 	XStudioDeliverTo                 *Relation   `xmlrpc:"x_studio_deliver_to,omitempty"`
 	XStudioDeliverTo1                *Many2One   `xmlrpc:"x_studio_deliver_to_1,omitempty"`
 	XStudioDeliveryAddress           *Many2One   `xmlrpc:"x_studio_delivery_address,omitempty"`
+	XStudioDestinationLocation       *Many2One   `xmlrpc:"x_studio_destination_location,omitempty"`
 	XStudioPickUpDatetime            *Time       `xmlrpc:"x_studio_pick_up_datetime,omitempty"`
 	XStudioPickupDate                *Time       `xmlrpc:"x_studio_pickup_date,omitempty"`
 	XStudioReceiveFrom               *Many2One   `xmlrpc:"x_studio_receive_from,omitempty"`
