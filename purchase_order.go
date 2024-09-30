@@ -92,6 +92,8 @@ type PurchaseOrder struct {
 	WebsiteMessageIds            *Relation  `xmlrpc:"website_message_ids,omitempty"`
 	WriteDate                    *Time      `xmlrpc:"write_date,omitempty"`
 	WriteUid                     *Many2One  `xmlrpc:"write_uid,omitempty"`
+	XStudioConfirmationDate      *Time      `xmlrpc:"x_studio_confirmation_date,omitempty"`
+	XStudioExpectedArrival       *Time      `xmlrpc:"x_studio_expected_arrival,omitempty"`
 	XStudioProductCategory       *Selection `xmlrpc:"x_studio_product_category,omitempty"`
 }
 
